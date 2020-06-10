@@ -1,27 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import DateMillis from "../types/DateMillis";
 import Time from "./Time";
-
-const REFRESH_RATE = 1000; /* ms */
-
-function calcDeltaTime(finishDate: Date): DateMillis {
-    const difference = finishDate.valueOf() - Date.now().valueOf();
-    return difference > 0 ? difference : 0;
-}
+import useInterval from "../hooks/useInterval";
+import intervalRefreshRate from "../constants/intervalRefreshRate";
 
 interface Props {
     finishDate: Date;
 }
 
 export default function CountToDate({ finishDate }: Props) {
-    const [deltaTime, setDeltaTime] = useState<DateMillis>(calcDeltaTime(finishDate));
+    const [deltaTime, setDeltaTime] = useState<DateMillis>(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setDeltaTime(calcDeltaTime(finishDate));
-        }, REFRESH_RATE);
-        return () => clearInterval(interval);
-    }, [finishDate]);
+    useInterval(() => {
+        const difference = finishDate.valueOf() - Date.now().valueOf();
+        setDeltaTime(difference > 0 ? difference : 0);
+    }, intervalRefreshRate);
 
     return (
         <Time time={deltaTime}/>
