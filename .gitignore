@@ -118,3 +118,6 @@ dist
 # IDE configs
 .idea
 .vscode
+
+# user defined logo
+public/logo.png
