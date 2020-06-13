@@ -5,7 +5,7 @@ import {Dispatch, SetStateAction, useState} from 'react';
  * @param key the key for storing it in the localStorage
  * @param defaultValue the default value if no value was previously set
  */
-export default function useLocalStorageState<T>(key: string, defaultValue: T): [
+export default function useStoredState<T>(key: string, defaultValue: T): [
     T,
     Dispatch<SetStateAction<T>>,
 ] {

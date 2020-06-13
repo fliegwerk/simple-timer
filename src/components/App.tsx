@@ -10,20 +10,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faGlobe, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import FileObj from "../types/FileObj";
-import useLocalStorageState from "../hooks/useLocalStorageState";
+import useStoredState from "../hooks/useStoredState";
+import useStoredDateState from "../hooks/useStoredDateState";
 
 const defaultInfoText = 'Aerospace Technology';
 
 
 function App() {
     // global app state
-    const [appState, setAppState] = useLocalStorageState<AppState>('app-state', 'none');
+    const [appState, setAppState] = useStoredState<AppState>('app-state', 'none');
     // states for the different modes
-    const [finishDate, setFinishDate] = useState<Date>(new Date());
-    const [countdownTime, setCountdownTime] = useLocalStorageState<DateMillis>('countdownTime',
+    const [finishDate, setFinishDate] = useStoredDateState('finish-date', new Date());
+    const [countdownTime, setCountdownTime] = useStoredState<DateMillis>('countdownTime',
         15 * 60 * 1000);
-    const [infoText, setInfoText] = useLocalStorageState<string>('infoText', defaultInfoText);
-    const [image, setImage] = useLocalStorageState<FileObj | null>('image', null);
+    const [infoText, setInfoText] = useStoredState<string>('infoText', defaultInfoText);
+    const [image, setImage] = useStoredState<FileObj | null>('image', null);
 
     function backToSettings() {
         setAppState('none');
