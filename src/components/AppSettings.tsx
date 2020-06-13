@@ -34,6 +34,16 @@ export default function AppSettings(
     return (
         <div className="container">
             <div>
+                <h2>Custom Text</h2>
+                <div>
+                    <textarea className="textarea"
+                              value={infoText}
+                              onChange={event => setInfoText(event.target.value)}
+                    />
+                </div>
+            </div>
+
+            <div>
                 <h2>Count to datetime</h2>
                 <div>
                     <DatePicker
@@ -55,15 +65,6 @@ export default function AppSettings(
                     <TimeSpanPicker countdownTime={countdownTime} setCountdownTime={setCountdownTime}/>
                 </div>
                 <button onClick={startCountdown}>Start</button>
-            </div>
-            <div>
-                <h2>Custom Text</h2>
-                <div>
-                    <textarea className="textarea"
-                              value={infoText}
-                              onChange={event => setInfoText(event.target.value)}
-                    />
-                </div>
             </div>
         </div>
     );
