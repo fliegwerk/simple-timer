@@ -60,7 +60,7 @@ export default function TimeSpanPicker({ countdownTime, setCountdownTime }: Prop
                 <div key={elem.id}>
                     <label htmlFor={elem.id}>{elem.label}</label>
                     <input className="input"
-                           type={elem.id}
+                           type="number"
                            id={elem.id}
                            name={elem.id}
                            value={inputState[elem.id]}
