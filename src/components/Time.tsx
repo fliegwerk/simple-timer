@@ -11,21 +11,21 @@ export default function Time({ time }: Props) {
     const strTimeObj = timeFormatter(time);
     return (
         <div className="clock">
-            <div>
-                <span>{strTimeObj.days}</span>
-                <span>Days</span>
+            <div className="time-container time-days">
+                <span className="time-value time-days-value">{strTimeObj.days}</span>
+                <span className="time-label time-days-label">Days</span>
             </div>
-            <div>
-                <span>{strTimeObj.hours}</span>
-                <span>Hours</span>
+            <div className="time-container time-hours">
+                <span className="time-value time-hours-value">{strTimeObj.hours}</span>
+                <span className="time-label time-hours-label">Hours</span>
             </div>
-            <div>
-                <span>{strTimeObj.minutes}</span>
-                <span>Minutes</span>
+            <div className="time-container time-minutes">
+                <span className="time-value time-minutes-value">{strTimeObj.minutes}</span>
+                <span className="time-label time-minutes-label">Minutes</span>
             </div>
-            <div>
-                <span>{strTimeObj.seconds}</span>
-                <span>Seconds</span>
+            <div className="time-container time-seconds">
+                <span className="time-value time-seconds-value">{strTimeObj.seconds}</span>
+                <span className="time-label time-seconds-label">Seconds</span>
             </div>
         </div>
     );

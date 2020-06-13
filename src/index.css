@@ -9,13 +9,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --bg: #151515;
+  --fg: #ffffff;
+  --fg-dim: #b3b3b3;
+  --gray: #4e4e4e;
+  --accent: #a35212;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #151515;
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--fg);
 }
 
 #root {
@@ -51,32 +59,32 @@ button {
   border: none;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0.5rem;
-  background: #151515;
-  color: #b3b3b3;
+  background: transparent;
+  color: var(--fg-dim);
   font-weight: 400;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 button:hover {
-  color: #ffffff;
-  font-weight: 700;
+  color: var(--fg);
 }
 
 button:disabled {
-  color: #666666;
+  color: var(--gray);
   font-weight: 100;
 }
 
 footer {
   margin-top: 2rem;
-  border-top: 0.2px solid #4e4e4e;
-  color: #4e4e4e;
+  border-top: 0.2px solid var(--fg-dim);
+  color: var(--fg-dim);
 }
 
 footer a {
-  color: #4e4e4e;
+  color: var(--fg-dim);
   text-decoration: none;
 }
 

@@ -39,8 +39,8 @@
     text-align: left;
     margin-top: 0.5rem;
     padding: 0.25rem 0.5rem;
-    background: #4e4e4e;
-    color: #ffffff;
+    background: var(--gray);
+    color: var(--fg);
     border-radius: 0;
     border: none;
 }

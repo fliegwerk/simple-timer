@@ -1,7 +1,7 @@
 .infotext {
     width: 100%;
     display: block;
-    color: #ffffff;
+    color: var(--fg);
     text-align: center;
     margin: 0.5rem 0;
     font-weight: 700;
