@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 - `repository` field in `package.json` as it lead to `electron-builder` failing builds due to non-existent `GH_Token` while trying to release the package in local builds
+- *per-push* electron native executable CI builds
 ### Fixed
 ### Security
 ## [0.3.6] - 2020-06-13
