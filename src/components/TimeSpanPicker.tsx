@@ -13,20 +13,20 @@ type FormElement = {
 
 const formDefinition: FormElement[] = [
     {
-        id: 'seconds',
-        label: 'Seconds:'
-    },
-    {
-        id: 'minutes',
-        label: 'Minutes:'
+        id: 'days',
+        label: 'Days:'
     },
     {
         id: 'hours',
         label: 'Hours:'
     },
     {
-        id: 'days',
-        label: 'Days:'
+        id: 'minutes',
+        label: 'Minutes:'
+    },
+    {
+        id: 'seconds',
+        label: 'Seconds:'
     }
 ];
 

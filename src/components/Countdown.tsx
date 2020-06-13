@@ -6,15 +6,16 @@ import DateMillis from "../types/DateMillis";
 import useInterval from "../hooks/useInterval";
 import intervalRefreshRate from "../constants/intervalRefreshRate";
 import InfoText from "./InfoText";
-
-const defaultInfoText = 'Time until finish:'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPause, faPlay, faStop, faUndo } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
     countdownTime: DateMillis;
     infoText?: string;
+    setInfoText?: (newText: string) => void;
 }
 
-export default function Countdown({ countdownTime, infoText }: Props) {
+export default function Countdown({ countdownTime, infoText, setInfoText }: Props) {
     // time handling
     const [remainingTime, setRemainingTime] = useState<DateMillis>(countdownTime);
     const [endTime, setEndTime] = useState<DateMillis>(0);
@@ -43,17 +44,19 @@ export default function Countdown({ countdownTime, infoText }: Props) {
             setStartEnabled(false);
             setStopEnabled(true);
         } else {
-            setStartEnabled(true);
+            setStartEnabled(remainingTime > 0);
             setStopEnabled(false);
         }
-    }, [delay]);
+    }, [delay, remainingTime]);
 
     // calculate remaining time every delay if delay is not null
     useInterval(updateRemainingTime, delay);
 
     function startCountdown() {
-        setEndTime(Date.now() + remainingTime);
-        setDelay(intervalRefreshRate);
+        if (remainingTime > 0) {
+            setEndTime(Date.now() + remainingTime);
+            setDelay(intervalRefreshRate);
+        }
     }
 
     function stopCountdown() {
@@ -69,12 +72,12 @@ export default function Countdown({ countdownTime, infoText }: Props) {
 
     return (
         <>
-            <InfoText infoText={infoText ? infoText : defaultInfoText} />
+            <InfoText infoText={infoText} editable={true} setInfoText={setInfoText} />
             <Time time={remainingTime} />
             <div className="buttonbar">
-                <button onClick={startCountdown} disabled={!startEnabled}>Start</button>
-                <button onClick={stopCountdown} disabled={!stopEnabled}>Stop</button>
-                <button onClick={resetCountdown}>Reset</button>
+                <button onClick={resetCountdown}><FontAwesomeIcon icon={faUndo} /></button>
+                <button onClick={stopCountdown} disabled={!stopEnabled}><FontAwesomeIcon icon={faPause} /></button>
+                <button onClick={startCountdown} disabled={!startEnabled}><FontAwesomeIcon icon={faPlay} /></button>
             </div>
         </>
     );

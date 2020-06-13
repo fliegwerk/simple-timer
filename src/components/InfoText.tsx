@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import './InfoText.css';
+import ContentEditable from "react-contenteditable";
 
 interface Props {
-    infoText: string;
+    infoText?: string;
+    setInfoText?: (newText: string) => void;
+    small?: boolean;
+    editable?: boolean;
 }
 
-export default function InfoText({ infoText }: Props) {
-    const strings = infoText.split('\n');
+export default function InfoText({ infoText,setInfoText, small, editable }: Props) {
+    const text = useRef<string>(infoText || '');
+
+    const className = `${small && 'small'} infotext`;
 
     return (
-        <>
-            {strings.map(str => <h2 key={str} className="infotext">{ str }</h2>)}
-        </>
+        <ContentEditable className={className}
+                         html={text.current}
+                         disabled={!editable}
+                         onChange={event => text.current = event.target.value}
+                         onBlur={() => setInfoText && setInfoText(text.current)}
+                         tagName="h2"
+        />
     );
 }
