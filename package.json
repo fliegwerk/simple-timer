@@ -1,5 +1,7 @@
 {
   "name": "simple-timer",
+  "author": "fliegwerk",
+  "description": "A simple timer app.",
   "version": "0.2.0",
   "private": true,
   "homepage": "./",
@@ -27,7 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "version": "node ./meta-tools/version-update-changelog.js"
+    "version": "node ./meta-tools/version-update-changelog.js",
+    "electron:start": "react-scripts build && electron build/electron.js",
+    "electron:build": "react-scripts build && electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,9 +48,29 @@
       "last 1 safari version"
     ]
   },
+  "build": {
+    "appId": "com.fliegwerk.simple-timer",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": ["portable", "nsis"]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
   "devDependencies": {
     "@types/react-datepicker": "^2.11.1",
     "chalk": "^4.1.0",
+    "electron": "^9.0.4",
+    "electron-builder": "^22.7.0",
     "shelljs": "^0.8.4"
   }
 }
