@@ -20,7 +20,8 @@ function App() {
     const [appState, setAppState] = useLocalStorageState<AppState>('app-state', 'none');
     // states for the different modes
     const [finishDate, setFinishDate] = useState<Date>(new Date());
-    const [countdownTime, setCountdownTime] = useState<DateMillis>(15 * 60 * 1000);
+    const [countdownTime, setCountdownTime] = useLocalStorageState<DateMillis>('countdownTime',
+        15 * 60 * 1000);
     const [infoText, setInfoText] = useLocalStorageState<string>('infoText', defaultInfoText);
     const [image, setImage] = useLocalStorageState<FileObj | null>('image', null);
 
@@ -83,7 +84,10 @@ function App() {
                         <FontAwesomeIcon icon={faGlobe}/>
                     </a>
                 </div>
-                <p className="center">Simple Timer by fliegwerk</p>
+                <p className="center">
+                    Simple Timer by fliegwerk&nbsp;|&nbsp;
+                    <a href="https://www.fliegwerk.com/legal" target="_blank" rel="noopener noreferrer">Legal Notice</a>
+                </p>
             </footer>
         </div>
     );

@@ -10,10 +10,13 @@ export default function useLocalStorageState<T>(key: string, defaultValue: T): [
     Dispatch<SetStateAction<T>>,
 ] {
     const storedValue = window.localStorage.getItem(key);
+    // Use previously stored value or, if nonexistent, the default value:
     const initialValue = storedValue ?? JSON.stringify(defaultValue);
+
     const [value, setValue] = useState<T>(JSON.parse(initialValue));
 
     return [value, (newValue, ...args) => {
+        // Store new values in localStorage as well:
         localStorage.setItem(key, JSON.stringify(newValue));
         return setValue(newValue, ...args);
     }]
