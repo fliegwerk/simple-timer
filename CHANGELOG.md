@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
+- (hopefully:) CI Config
 ### Security
 ## [0.3.5] - 2020-06-13
 ### Fixed

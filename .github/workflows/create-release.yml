@@ -30,7 +30,7 @@ jobs:
           release_name: ${{ github.ref }}
           body: |
             See [Changelog](https://github.com/fliegwerk/simple-timer/blob/master/CHANGELOG.md)
-          draft: false
+          draft: true
           prerelease: true
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
