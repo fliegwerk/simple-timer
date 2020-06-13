@@ -10,18 +10,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faGlobe, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import FileObj from "../types/FileObj";
+import useLocalStorageState from "../hooks/useLocalStorageState";
 
 const defaultInfoText = 'Aerospace Technology';
 
 
 function App() {
     // global app state
-    const [appState, setAppState] = useState<AppState>('none');
+    const [appState, setAppState] = useLocalStorageState<AppState>('app-state', 'none');
     // states for the different modes
     const [finishDate, setFinishDate] = useState<Date>(new Date());
     const [countdownTime, setCountdownTime] = useState<DateMillis>(15 * 60 * 1000);
-    const [infoText, setInfoText] = useState<string>(defaultInfoText);
-    const [image, setImage] = useState<FileObj | null>(null);
+    const [infoText, setInfoText] = useLocalStorageState<string>('infoText', defaultInfoText);
+    const [image, setImage] = useLocalStorageState<FileObj | null>('image', null);
 
     function backToSettings() {
         setAppState('none');
