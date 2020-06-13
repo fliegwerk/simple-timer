@@ -18,12 +18,18 @@ function createWindow () {
         titleBarStyle: "hiddenInset",
     })
 
+
     // and load the index.html of the app.
     const startUrl = path.resolve(__dirname, './index.html');
     win.loadFile(startUrl)
     win.removeMenu();
+
+    win.webContents.on('new-window', function(e, url) {
+        e.preventDefault();
+        require('electron').shell.openExternal(url);
+    });
     // Öffnen der DevTools.
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

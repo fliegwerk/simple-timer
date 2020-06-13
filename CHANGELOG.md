@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- `is-electron` library to detect Electron platform executions and adjust the UI accordingly
+- Electron-specific styling to make native apps feel more native
 ### Changed
+- Open external links in system browser in native app version
 ### Deprecated
 ### Removed
 ### Fixed

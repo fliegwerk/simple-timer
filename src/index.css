@@ -24,6 +24,11 @@ body {
   padding: 1rem;
 }
 
+.electron * {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
