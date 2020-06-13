@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
+
+import './Countdown.css';
 import Time from "./Time";
 import DateMillis from "../types/DateMillis";
 import useInterval from "../hooks/useInterval";
 import intervalRefreshRate from "../constants/intervalRefreshRate";
+import InfoText from "./InfoText";
+
+const defaultInfoText = 'Time until finish:'
 
 interface Props {
     countdownTime: DateMillis;
+    infoText?: string;
 }
 
-export default function Countdown({ countdownTime }: Props) {
+export default function Countdown({ countdownTime, infoText }: Props) {
     // time handling
     const [remainingTime, setRemainingTime] = useState<DateMillis>(countdownTime);
     const [endTime, setEndTime] = useState<DateMillis>(0);
@@ -63,12 +69,13 @@ export default function Countdown({ countdownTime }: Props) {
 
     return (
         <>
+            <InfoText infoText={infoText ? infoText : defaultInfoText} />
             <Time time={remainingTime} />
-            <p>
+            <div className="buttonbar">
                 <button onClick={startCountdown} disabled={!startEnabled}>Start</button>
                 <button onClick={stopCountdown} disabled={!stopEnabled}>Stop</button>
                 <button onClick={resetCountdown}>Reset</button>
-            </p>
+            </div>
         </>
     );
 }

@@ -1,16 +1,25 @@
 .form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.form label {
-    width: 30%;
-    text-align: right;
-    padding-right: 10px;
+.form div {
+    display: block;
+    width: 100%;
     font-size: 1rem;
-    margin-top: 10px;
 }
 
-.form input {
-    width: 50%;
+.form div label,
+.form div input {
+    display: block;
+}
+
+.form div label {
+    text-align: left;
+    margin: 5px 0;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
 }
