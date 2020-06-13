@@ -29,7 +29,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body: |
-            See [Changelog](https://github.com/fliegwerk/simple-timer/blob/${{ github.ref }}/CHANGELOG.md)
+            See [Changelog](https://github.com/fliegwerk/simple-timer/blob/master/CHANGELOG.md)
           draft: false
           prerelease: true
       - name: Upload Release Asset
