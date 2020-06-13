@@ -26,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "version": "node ./meta-tools/version-update-changelog.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +45,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-datepicker": "^2.11.1"
+    "@types/react-datepicker": "^2.11.1",
+    "chalk": "^4.1.0",
+    "shelljs": "^0.8.4"
   }
 }

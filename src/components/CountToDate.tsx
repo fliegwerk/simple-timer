@@ -4,7 +4,7 @@ import DateMillis from "../types/DateMillis";
 import Time from "./Time";
 import useInterval from "../hooks/useInterval";
 import intervalRefreshRate from "../constants/intervalRefreshRate";
-import InfoText from "./InfoText";
+import InfoText from "./Countdown/InfoText/InfoText";
 
 interface Props {
     finishDate: Date;

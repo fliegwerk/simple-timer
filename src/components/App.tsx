@@ -1,27 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './App.css';
 import DateMillis from "../types/DateMillis";
-import AppSettings from './AppSettings';
-import Countdown from "./Countdown";
+import AppSettings from './AppSettings/AppSettings';
+import Countdown from "./Countdown/Countdown";
 import CountToDate from "./CountToDate";
 import AppState from "../types/AppState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faGlobe, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import FileObj from "../types/FileObj";
+import useStoredState from "../hooks/useStoredState";
+import useStoredDateState from "../hooks/useStoredDateState";
 
 const defaultInfoText = 'Aerospace Technology';
 
 
 function App() {
     // global app state
-    const [appState, setAppState] = useState<AppState>('none');
+    const [appState, setAppState] = useStoredState<AppState>('app-state', 'none');
     // states for the different modes
-    const [finishDate, setFinishDate] = useState<Date>(new Date());
-    const [countdownTime, setCountdownTime] = useState<DateMillis>(15 * 60 * 1000);
-    const [infoText, setInfoText] = useState<string>(defaultInfoText);
-    const [image, setImage] = useState<FileObj | null>(null);
+    const [finishDate, setFinishDate] = useStoredDateState('finish-date', new Date());
+    const [countdownTime, setCountdownTime] = useStoredState<DateMillis>('countdownTime',
+        15 * 60 * 1000);
+    const [infoText, setInfoText] = useStoredState<string>('infoText', defaultInfoText);
+    const [image, setImage] = useStoredState<FileObj | null>('image', null);
 
     function backToSettings() {
         setAppState('none');
@@ -82,7 +85,10 @@ function App() {
                         <FontAwesomeIcon icon={faGlobe}/>
                     </a>
                 </div>
-                <p className="center">Simple Timer by fliegwerk</p>
+                <p className="center">
+                    Simple Timer by fliegwerk&nbsp;|&nbsp;
+                    <a href="https://www.fliegwerk.com/legal" target="_blank" rel="noopener noreferrer">Legal Notice</a>
+                </p>
             </footer>
         </div>
     );

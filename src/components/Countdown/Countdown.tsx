@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import './Countdown.css';
-import Time from "./Time";
-import DateMillis from "../types/DateMillis";
-import useInterval from "../hooks/useInterval";
-import intervalRefreshRate from "../constants/intervalRefreshRate";
-import InfoText from "./InfoText";
+import Time from "../Time";
+import DateMillis from "../../types/DateMillis";
+import useInterval from "../../hooks/useInterval";
+import intervalRefreshRate from "../../constants/intervalRefreshRate";
+import InfoText from "./InfoText/InfoText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause, faPlay, faUndo } from "@fortawesome/free-solid-svg-icons";
 

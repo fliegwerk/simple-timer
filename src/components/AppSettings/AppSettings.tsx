@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, {useRef} from "react";
 import DatePicker from 'react-datepicker';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faParagraph,
     faCalendar,
@@ -12,12 +12,12 @@ import {
 import './AppSettings.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import AppState from "../types/AppState";
-import TimeSpanPicker from "./TimeSpanPicker";
-import DateMillis from "../types/DateMillis";
-import DatePickerInput from "./DatePickerInput";
+import AppState from "../../types/AppState";
+import TimeSpanPicker from "./TimeSpanPicker/TimeSpanPicker";
+import DateMillis from "../../types/DateMillis";
+import DatePickerInput from "./DatePickerInput/DatePickerInput";
 import ContentEditable from "react-contenteditable";
-import FileObj from "../types/FileObj";
+import FileObj from "../../types/FileObj";
 
 interface Props {
     finishDate: Date;
@@ -32,7 +32,7 @@ interface Props {
 }
 
 export default function AppSettings(
-    { finishDate, countdownTime, setFinishDate, setCountdownTime, setAppState, infoText, setInfoText, setImage, image }: Props
+    {finishDate, countdownTime, setFinishDate, setCountdownTime, setAppState, infoText, setInfoText, setImage, image}: Props
 ) {
     const text = useRef<string>(infoText || '');
 
@@ -68,7 +68,7 @@ export default function AppSettings(
     return (
         <div className="container">
             <div>
-                <h2><FontAwesomeIcon icon={faParagraph} /> Title</h2>
+                <h2><FontAwesomeIcon icon={faParagraph}/> Title</h2>
                 <div>
                     <ContentEditable className="textarea"
                                      html={text.current}
@@ -80,11 +80,11 @@ export default function AppSettings(
             </div>
 
             <div>
-                <h2><FontAwesomeIcon icon={faImage} /> Image</h2>
+                <h2><FontAwesomeIcon icon={faImage}/> Image</h2>
                 <div>
-                    <input id="inputImage" type="file" onChange={onFileSelected} />
+                    <input id="inputImage" type="file" onChange={onFileSelected}/>
                     <label className="textarea" htmlFor="inputImage">
-                        <FontAwesomeIcon icon={faFolderOpen} /> Select file ({image ? image.title : 'none selected'})
+                        <FontAwesomeIcon icon={faFolderOpen}/> Select file ({image ? image.title : 'none selected'})
                     </label>
                     {image && <button onClick={clearFile}>Clear</button>}
                     <p><small>This image only gets used locally. No images ever reach our servers.</small></p>
@@ -92,7 +92,7 @@ export default function AppSettings(
             </div>
 
             <div>
-                <h2><FontAwesomeIcon icon={faCalendar} /> Count to datetime</h2>
+                <h2><FontAwesomeIcon icon={faCalendar}/> Count to datetime</h2>
                 <div className="datepicker">
                     <DatePicker
                         selected={finishDate}
@@ -102,17 +102,17 @@ export default function AppSettings(
                         timeIntervals={5}
                         dateFormat="yyyy MMMM d, HH:mm"
                         // @ts-ignore
-                        customInput={<DatePickerInput />}
+                        customInput={<DatePickerInput/>}
                     />
                 </div>
-                <button onClick={startCountToDate}>Start <FontAwesomeIcon icon={faPlaneDeparture} /></button>
+                <button onClick={startCountToDate}>Start <FontAwesomeIcon icon={faPlaneDeparture}/></button>
             </div>
             <div>
-                <h2><FontAwesomeIcon icon={faHourglassStart} /> Countdown</h2>
+                <h2><FontAwesomeIcon icon={faHourglassStart}/> Countdown</h2>
                 <div>
                     <TimeSpanPicker countdownTime={countdownTime} setCountdownTime={setCountdownTime}/>
                 </div>
-                <button onClick={startCountdown}>Start <FontAwesomeIcon icon={faRocket} /></button>
+                <button onClick={startCountdown}>Start <FontAwesomeIcon icon={faRocket}/></button>
             </div>
         </div>
     );
