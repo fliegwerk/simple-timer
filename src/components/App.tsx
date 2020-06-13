@@ -13,6 +13,8 @@ import FileObj from "../types/FileObj";
 import useStoredState from "../hooks/useStoredState";
 import useStoredDateState from "../hooks/useStoredDateState";
 
+import {version as packageVersion} from "../../package.json";
+
 const defaultInfoText = 'Aerospace Technology';
 
 
@@ -86,7 +88,7 @@ function App() {
                     </a>
                 </div>
                 <p className="center">
-                    Simple Timer by fliegwerk&nbsp;|&nbsp;
+                    Simple Timer v{packageVersion} by fliegwerk&nbsp;|&nbsp;
                     <a href="https://www.fliegwerk.com/legal" target="_blank" rel="noopener noreferrer">Legal Notice</a>
                 </p>
             </footer>
