@@ -1,9 +1,34 @@
 import React, { useState } from "react";
 
 import './TimeSpanPicker.css';
+import './DatePickerInput.css';
 import StrTimeObj from "../types/StrTimeObj";
-import { convertToDateMillis, convertToStrTimeObj } from "../lib/convertStrTime";
+import { convertToDateMillis, convertToStrTimeObj } from "../lib/convertTimeObj";
 import DateMillis from "../types/DateMillis";
+
+type FormElement = {
+    id: keyof StrTimeObj;
+    label: string;
+}
+
+const formDefinition: FormElement[] = [
+    {
+        id: 'seconds',
+        label: 'Seconds:'
+    },
+    {
+        id: 'minutes',
+        label: 'Minutes:'
+    },
+    {
+        id: 'hours',
+        label: 'Hours:'
+    },
+    {
+        id: 'days',
+        label: 'Days:'
+    }
+];
 
 interface Props {
     countdownTime: DateMillis;
@@ -31,16 +56,19 @@ export default function TimeSpanPicker({ countdownTime, setCountdownTime }: Prop
 
     return (
         <form className="form">
-            <label htmlFor="seconds">Seconds:</label>
-            <input type="number" id="seconds" name="seconds" value={inputState.seconds} onChange={onChange}
-                   onBlur={onBlur}/>
-            <label htmlFor="minutes">Minutes:</label>
-            <input type="number" id="minutes" name="minutes" value={inputState.minutes} onChange={onChange}
-                   onBlur={onBlur}/>
-            <label htmlFor="hours">Hours:</label>
-            <input type="number" id="hours" name="hours" value={inputState.hours} onChange={onChange} onBlur={onBlur}/>
-            <label htmlFor="days">Days:</label>
-            <input type="number" id="days" name="days" value={inputState.days} onChange={onChange} onBlur={onBlur}/>
+            {formDefinition.map(elem => (
+                <div key={elem.id}>
+                    <label htmlFor={elem.id}>{elem.label}</label>
+                    <input className="input"
+                           type={elem.id}
+                           id={elem.id}
+                           name={elem.id}
+                           value={inputState[elem.id]}
+                           onChange={onChange}
+                           onBlur={onBlur}
+                    />
+                </div>
+            ))}
         </form>
     );
 }

@@ -1,0 +1,11 @@
+.infotext {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+}

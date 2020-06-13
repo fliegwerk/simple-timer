@@ -1,3 +1,42 @@
-.time {
-    font-size: 2rem;
+.clock {
+    display: flex;
+    margin: 20px;
+}
+
+.clock div {
+    position: relative;
+    margin: 0 5px;
+}
+
+.clock div span {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    background: #5f5f5f;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.clock div span:nth-child(2) {
+    height: 30px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background: #393939;
+    text-transform: uppercase;
+}
+
+.clock div:last-child span {
+    background: #a35212;
+}
+
+.clock div:last-child span:nth-child(2) {
+    background: #71370b;
 }
