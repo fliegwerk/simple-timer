@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import './App.css';
 import DateMillis from "../types/DateMillis";
-import AppSettings from './AppSettings';
-import Countdown from "./Countdown";
+import AppSettings from './AppSettings/AppSettings';
+import Countdown from "./Countdown/Countdown";
 import CountToDate from "./CountToDate";
 import AppState from "../types/AppState";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

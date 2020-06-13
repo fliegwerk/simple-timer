@@ -12,12 +12,12 @@ import {
 import './AppSettings.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import AppState from "../types/AppState";
-import TimeSpanPicker from "./TimeSpanPicker";
-import DateMillis from "../types/DateMillis";
-import DatePickerInput from "./DatePickerInput";
+import AppState from "../../types/AppState";
+import TimeSpanPicker from "./TimeSpanPicker/TimeSpanPicker";
+import DateMillis from "../../types/DateMillis";
+import DatePickerInput from "./DatePickerInput/DatePickerInput";
 import ContentEditable from "react-contenteditable";
-import FileObj from "../types/FileObj";
+import FileObj from "../../types/FileObj";
 
 interface Props {
     finishDate: Date;

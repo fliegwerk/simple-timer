@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 import './TimeSpanPicker.css';
-import './DatePickerInput.css';
-import StrTimeObj from "../types/StrTimeObj";
-import { convertToDateMillis, convertToStrTimeObj } from "../lib/convertTimeObj";
-import DateMillis from "../types/DateMillis";
+import '../DatePickerInput/DatePickerInput.css';
+import StrTimeObj from "../../../types/StrTimeObj";
+import { convertToDateMillis, convertToStrTimeObj } from "../../../lib/convertTimeObj";
+import DateMillis from "../../../types/DateMillis";
 
 type FormElement = {
     id: keyof StrTimeObj;
