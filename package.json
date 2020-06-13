@@ -2,7 +2,7 @@
   "name": "simple-timer",
   "author": "fliegwerk",
   "description": "A simple timer app.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "homepage": "./",
   "dependencies": {
@@ -58,7 +58,10 @@
       "buildResources": "assets"
     },
     "win": {
-      "target": ["portable", "nsis"]
+      "target": [
+        "portable",
+        "nsis"
+      ]
     },
     "linux": {
       "target": [
