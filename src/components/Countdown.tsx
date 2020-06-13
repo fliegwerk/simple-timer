@@ -7,7 +7,7 @@ import useInterval from "../hooks/useInterval";
 import intervalRefreshRate from "../constants/intervalRefreshRate";
 import InfoText from "./InfoText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPause, faPlay, faStop, faUndo } from "@fortawesome/free-solid-svg-icons";
+import { faPause, faPlay, faUndo } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
     countdownTime: DateMillis;
