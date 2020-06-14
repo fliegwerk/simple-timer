@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.4.0] - 2020-06-14
+### Added
 - `is-electron` library to detect Electron platform executions and adjust the UI accordingly
 - Electron-specific styling to make native apps feel more native
 - Necessary code for adding theming at a later stage
@@ -17,10 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Open external links in system browser in native app version
 - Unified colors in styling
 - Use CSS variables for colors
-### Deprecated
-### Removed
-### Fixed
-### Security
 ## [0.3.7] - 2020-06-13
 ### Changed
 - Adjusted CI config
@@ -70,7 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.1.0 - 2020-06-12
 Initial prerelease
 
-[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.3.7...HEAD
+[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.0...HEAD
 [0.1.3]: https://github.com/fliegwerk/simple-timer/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/fliegwerk/simple-timer/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/fliegwerk/simple-timer/compare/v0.1.0...v0.1.1
@@ -83,3 +86,4 @@ Initial prerelease
 [0.3.5]: https://github.com/fliegwerk/simple-timer/compare/v0.3.4...v0.3.5
 [0.3.6]: https://github.com/fliegwerk/simple-timer/compare/v0.3.5...v0.3.6
 [0.3.7]: https://github.com/fliegwerk/simple-timer/compare/v0.3.6...v0.3.7
+[0.4.0]: https://github.com/fliegwerk/simple-timer/compare/v0.3.7...v0.4.0
