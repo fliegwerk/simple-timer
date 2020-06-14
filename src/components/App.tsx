@@ -6,15 +6,13 @@ import AppSettings from './AppSettings/AppSettings';
 import Countdown from "./Countdown/Countdown";
 import CountToDate from "./CountToDate";
 import AppState from "../types/AppState";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faGlobe, faStopwatch } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronLeft, faGlobe, faStopwatch} from "@fortawesome/free-solid-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import FileObj from "../types/FileObj";
 import useStoredState from "../hooks/useStoredState";
 import useStoredDateState from "../hooks/useStoredDateState";
-
 import {version as packageVersion} from "../../package.json";
-
 const defaultInfoText = 'Aerospace Technology';
 
 
@@ -52,7 +50,7 @@ function App() {
                     </>
                 )}
 
-                {appState !== 'none' && image && <img id="logo" src={image.dataURI} alt={image.title} />}
+                {appState !== 'none' && image && <img id="logo" src={image.dataURI} alt={image.title}/>}
 
                 {appState === 'countdown' && <Countdown
                     countdownTime={countdownTime}
