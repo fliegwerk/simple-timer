@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `is-electron` library to detect Electron platform executions and adjust the UI accordingly
 - Electron-specific styling to make native apps feel more native
 - necessary code for adding theming at a later stage
-- added auto-adjustment to preferred color scheme (dark or light) based on Browser/System preferences
+- added auto-adjustment to preferred color scheme (dark or light) based on Browser/System preferences on the Electron native app platform
 ### Changed
 - Open external links in system browser in native app version
 - Unified colors in syling

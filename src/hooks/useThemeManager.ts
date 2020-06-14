@@ -20,7 +20,7 @@ export const light_default = {
     bg: 'white',
     fg_dim: '#888',
     gray: '#eee',
-    accent: 'lavender',
+    accent: 'powderblue',
     fg: '#222'
 }
 
