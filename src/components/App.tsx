@@ -13,6 +13,8 @@ import FileObj from "../types/FileObj";
 import useStoredState from "../hooks/useStoredState";
 import useStoredDateState from "../hooks/useStoredDateState";
 import {version as packageVersion} from "../../package.json";
+import DarkModeToggle from "./DarkModeToggler";
+
 const defaultInfoText = 'Aerospace Technology';
 
 
@@ -31,66 +33,69 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <header className="App-header">
-                {appState === 'none' && (
-                    <>
-                        <h1 className="heading"><FontAwesomeIcon icon={faStopwatch}/> Simple Timer</h1>
-                        <AppSettings
-                            finishDate={finishDate}
-                            countdownTime={countdownTime}
-                            setFinishDate={setFinishDate}
-                            setCountdownTime={setCountdownTime}
-                            setAppState={setAppState}
-                            infoText={infoText}
-                            setInfoText={setInfoText}
-                            setImage={setImage}
-                            image={image}
-                        />
-                    </>
-                )}
+        <DarkModeToggle>
+            <div className="App">
+                <header className="App-header">
+                    {appState === 'none' && (
+                        <>
+                            <h1 className="heading"><FontAwesomeIcon icon={faStopwatch}/> Simple Timer</h1>
+                            <AppSettings
+                                finishDate={finishDate}
+                                countdownTime={countdownTime}
+                                setFinishDate={setFinishDate}
+                                setCountdownTime={setCountdownTime}
+                                setAppState={setAppState}
+                                infoText={infoText}
+                                setInfoText={setInfoText}
+                                setImage={setImage}
+                                image={image}
+                            />
+                        </>
+                    )}
 
-                {appState !== 'none' && image && <img id="logo" src={image.dataURI} alt={image.title}/>}
+                    {appState !== 'none' && image && <img id="logo" src={image.dataURI} alt={image.title}/>}
 
-                {appState === 'countdown' && <Countdown
-                    countdownTime={countdownTime}
-                    infoText={infoText}
-                    setInfoText={setInfoText}
-                />}
-                {appState === 'countToDate' && <CountToDate
-                    finishDate={finishDate}
-                    infoText={infoText}
-                    setInfoText={setInfoText}
-                />}
+                    {appState === 'countdown' && <Countdown
+                        countdownTime={countdownTime}
+                        infoText={infoText}
+                        setInfoText={setInfoText}
+                    />}
+                    {appState === 'countToDate' && <CountToDate
+                        finishDate={finishDate}
+                        infoText={infoText}
+                        setInfoText={setInfoText}
+                    />}
 
-                {appState !== 'none' && <button
-                    className="back"
-                    onClick={backToSettings}
-                >
-                    <FontAwesomeIcon icon={faChevronLeft}/> Back
-                </button>}
-            </header>
-            <footer>
-                <div className="smlinks">
-                    <a className="iconlink"
-                       href="https://github.com/fliegwerk/simple-timer/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub}/>
-                    </a>
-                    <a className="iconlink"
-                       href="https://fliegwerk.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGlobe}/>
-                    </a>
-                </div>
-                <p className="center">
-                    Simple Timer v{packageVersion} by fliegwerk&nbsp;|&nbsp;
-                    <a href="https://www.fliegwerk.com/legal" target="_blank" rel="noopener noreferrer">Legal Notice</a>
-                </p>
-            </footer>
-        </div>
+                    {appState !== 'none' && <button
+                        className="back"
+                        onClick={backToSettings}
+                    >
+                        <FontAwesomeIcon icon={faChevronLeft}/> Back
+                    </button>}
+                </header>
+                <footer>
+                    <div className="smlinks">
+                        <a className="iconlink"
+                           href="https://github.com/fliegwerk/simple-timer/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faGithub}/>
+                        </a>
+                        <a className="iconlink"
+                           href="https://fliegwerk.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faGlobe}/>
+                        </a>
+                    </div>
+                    <p className="center">
+                        Simple Timer v{packageVersion} by fliegwerk&nbsp;|&nbsp;
+                        <a href="https://www.fliegwerk.com/legal" target="_blank" rel="noopener noreferrer">Legal
+                            Notice</a>
+                    </p>
+                </footer>
+            </div>
+        </DarkModeToggle>
     );
 }
 
