@@ -41,17 +41,11 @@ export default function TimeSpanPicker({ countdownTime, setCountdownTime }: Prop
     function onChange(event: React.FocusEvent<HTMLInputElement>) {
         const { value, id } = event.target;
 
-        setInputState(prevStates => {
-            const prevValue = prevStates[id as keyof StrTimeObj];
-            return {
-                ...prevStates,
-                [id]: /^[0-9]*$/.test(value) ? value : prevValue,
-            }
-        });
-    }
+        const newState = {...JSON.parse(JSON.stringify(inputState))}; // Clone previous state object
+        newState[id] = Number.parseInt(value);
 
-    function onBlur() {
-        setCountdownTime(convertToDateMillis(inputState));
+        setInputState(newState);
+        setCountdownTime(convertToDateMillis(newState));
     }
 
     return (
@@ -65,7 +59,6 @@ export default function TimeSpanPicker({ countdownTime, setCountdownTime }: Prop
                            name={elem.id}
                            value={inputState[elem.id]}
                            onChange={onChange}
-                           onBlur={onBlur}
                     />
                 </div>
             ))}

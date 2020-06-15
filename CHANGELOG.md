@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
+- #19: Issue with spinner buttons in Firefox
 ### Security
 ## [0.4.1] - 2020-06-15
 ### Added
