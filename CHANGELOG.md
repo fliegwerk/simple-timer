@@ -10,8 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
-- #19: Issue with spinner buttons in Firefox
 ### Security
+## [0.4.2] - 2020-06-15
+### Fixed
+- #19: Issue with spinner buttons in Firefox
 ## [0.4.1] - 2020-06-15
 ### Added
 - Application Icon
@@ -82,7 +84,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.1.0 - 2020-06-12
 Initial prerelease
 
-[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.2...HEAD
 [0.1.3]: https://github.com/fliegwerk/simple-timer/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/fliegwerk/simple-timer/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/fliegwerk/simple-timer/compare/v0.1.0...v0.1.1
@@ -97,3 +99,4 @@ Initial prerelease
 [0.3.7]: https://github.com/fliegwerk/simple-timer/compare/v0.3.6...v0.3.7
 [0.4.0]: https://github.com/fliegwerk/simple-timer/compare/v0.3.7...v0.4.0
 [0.4.1]: https://github.com/fliegwerk/simple-timer/compare/v0.4.0...v0.4.1
+[0.4.2]: https://github.com/fliegwerk/simple-timer/compare/v0.4.1...v0.4.2
