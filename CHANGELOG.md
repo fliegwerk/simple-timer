@@ -6,16 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.4.1] - 2020-06-15
+### Added
 - Application Icon
 - Logo in `README.md`
 ### Changed
 - Favicon
 - Meta Description
 - Icons in web manifest
-### Deprecated
-### Removed
-### Fixed
-### Security
 ## [0.4.0] - 2020-06-14
 ### Added
 - `is-electron` library to detect Electron platform executions and adjust the UI accordingly
@@ -78,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.1.0 - 2020-06-12
 Initial prerelease
 
-[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.1...HEAD
 [0.1.3]: https://github.com/fliegwerk/simple-timer/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/fliegwerk/simple-timer/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/fliegwerk/simple-timer/compare/v0.1.0...v0.1.1
@@ -92,3 +95,4 @@ Initial prerelease
 [0.3.6]: https://github.com/fliegwerk/simple-timer/compare/v0.3.5...v0.3.6
 [0.3.7]: https://github.com/fliegwerk/simple-timer/compare/v0.3.6...v0.3.7
 [0.4.0]: https://github.com/fliegwerk/simple-timer/compare/v0.3.7...v0.4.0
+[0.4.1]: https://github.com/fliegwerk/simple-timer/compare/v0.4.0...v0.4.1
