@@ -1,7 +1,7 @@
 {
   "name": "simple-timer",
   "author": "fliegwerk",
-  "description": "A simple timer app.",
+  "description": "A really simple timer with customizable logo and heading",
   "version": "0.4.0",
   "private": true,
   "homepage": "./",
@@ -56,7 +56,7 @@
       "node_modules/**/*"
     ],
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "electron-builder-assets"
     },
     "win": {
       "target": [
