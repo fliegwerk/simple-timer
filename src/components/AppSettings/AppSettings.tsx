@@ -82,7 +82,7 @@ export default function AppSettings(
             <div>
                 <h2><FontAwesomeIcon icon={faImage}/> Image</h2>
                 <div>
-                    <input id="inputImage" type="file" onChange={onFileSelected}/>
+                    <input id="inputImage" type="file" accept={'.png,.jpg,.jpeg,.gif,.tiff,.svg'} onChange={onFileSelected}/>
                     <label className="textarea" htmlFor="inputImage">
                         <FontAwesomeIcon icon={faFolderOpen}/> Select file ({image ? image.title : 'none selected'})
                     </label>

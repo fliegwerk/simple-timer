@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- some unit tests
 ### Changed
+- restricted file types selectable when selecting a logo
 ### Deprecated
 ### Removed
 ### Fixed
+- handling of bigger images (which can't get stored in the `localStorage`), cf. [#21](https://github.com/fliegwerk/simple-timer/issues/21).
 ### Security
 ## [0.4.2] - 2020-06-15
 ### Fixed

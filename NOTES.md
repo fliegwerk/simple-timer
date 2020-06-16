@@ -1,0 +1,1 @@
+It might be possible to support storing larger images with the `lz-string` library for string compression. This, however, takes a bit of time to compress/decompress larger files, meaning it should only get implemented when we can add UI feedback regarding longer processes (e.g., spinner or loading bar).

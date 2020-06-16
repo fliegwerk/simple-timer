@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 import './TimeSpanPicker.css';
 import '../DatePickerInput/DatePickerInput.css';

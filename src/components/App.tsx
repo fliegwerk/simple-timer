@@ -14,6 +14,7 @@ import useStoredState from "../hooks/useStoredState";
 import useStoredDateState from "../hooks/useStoredDateState";
 import {version as packageVersion} from "../../package.json";
 import DarkModeToggle from "./DarkModeToggler";
+import useChunkedStoredState from "../hooks/useChunkedStoredState";
 
 const defaultInfoText = 'Aerospace Technology';
 
@@ -26,7 +27,7 @@ function App() {
     const [countdownTime, setCountdownTime] = useStoredState<DateMillis>('countdownTime',
         15 * 60 * 1000);
     const [infoText, setInfoText] = useStoredState<string>('infoText', defaultInfoText);
-    const [image, setImage] = useStoredState<FileObj | null>('image', null);
+    const [image, setImage] = useChunkedStoredState<FileObj | null>('image', 16, null);
 
     function backToSettings() {
         setAppState('none');
