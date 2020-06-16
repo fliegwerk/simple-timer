@@ -6,15 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.4.3] - 2020-06-16
+### Added
 - some unit tests
 - CI configuration that, for every commit, runs the project's tests
 ### Changed
 - restricted file types selectable when selecting a logo
-### Deprecated
-### Removed
 ### Fixed
 - handling of bigger images (which can't get stored in the `localStorage`), cf. [#21](https://github.com/fliegwerk/simple-timer/issues/21).
-### Security
 ## [0.4.2] - 2020-06-15
 ### Fixed
 - #19: Issue with spinner buttons in Firefox
@@ -88,7 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.1.0 - 2020-06-12
 Initial prerelease
 
-[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.2...HEAD
+[Unreleased]: https://github.com/fliegwerk/simple-timer/compare/v0.4.3...HEAD
 [0.1.3]: https://github.com/fliegwerk/simple-timer/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/fliegwerk/simple-timer/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/fliegwerk/simple-timer/compare/v0.1.0...v0.1.1
@@ -104,3 +108,4 @@ Initial prerelease
 [0.4.0]: https://github.com/fliegwerk/simple-timer/compare/v0.3.7...v0.4.0
 [0.4.1]: https://github.com/fliegwerk/simple-timer/compare/v0.4.0...v0.4.1
 [0.4.2]: https://github.com/fliegwerk/simple-timer/compare/v0.4.1...v0.4.2
+[0.4.3]: https://github.com/fliegwerk/simple-timer/compare/v0.4.2...v0.4.3
