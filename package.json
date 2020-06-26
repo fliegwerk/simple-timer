@@ -71,7 +71,7 @@
     }
   },
   "devDependencies": {
-    "@types/react-datepicker": "^3.0.1",
+    "@types/react-datepicker": "^3.0.2",
     "chalk": "^4.1.0",
     "electron": "^9.0.5",
     "electron-builder": "^22.7.0",
