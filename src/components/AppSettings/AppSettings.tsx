@@ -65,7 +65,7 @@ export default function AppSettings(
     }
 
     const handleDateChange = (date: Date | [Date, Date] | null) => {
-        if (date && !Array.isArray(date)) {
+        if (!Array.isArray(date)) {
             setFinishDate(date ? date : finishDate);
         }
     };
