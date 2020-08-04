@@ -64,6 +64,12 @@ export default function AppSettings(
         setImage(null);
     }
 
+    const handleDateChange = (date: Date | [Date, Date] | null) => {
+        if (!Array.isArray(date)) {
+            setFinishDate(date ? date : finishDate);
+        }
+    };
+
     // noinspection RequiredAttributes
     return (
         <div className="container">
@@ -96,7 +102,7 @@ export default function AppSettings(
                 <div className="datepicker">
                     <DatePicker
                         selected={finishDate}
-                        onChange={date => setFinishDate(date ? date : finishDate)}
+                        onChange={handleDateChange}
                         shouldCloseOnSelect={false}
                         showTimeSelect={true}
                         timeIntervals={5}
