@@ -1,4 +1,4 @@
 export default interface FileObj {
-    dataURI: string;
-    title: string;
+	dataURI: string;
+	title: string;
 }

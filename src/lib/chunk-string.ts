@@ -6,18 +6,22 @@
  * @example `chunkString('abc', 3)` results in `['a', 'b', 'c']
  * @example `chunkString('abcdef', 3)` results in `['ab', 'cd', 'ef']
  */
-export default function chunkString(input: string, numChunks: number): string[] {
-    if (numChunks <= 0)
-        throw new Error("numChunks must be greater than 0");
+export default function chunkString(
+	input: string,
+	numChunks: number
+): string[] {
+	if (numChunks <= 0) throw new Error('numChunks must be greater than 0');
 
-    const chunks = [];
+	const chunks = [];
 
-    for (let chunk = 1; chunk <= numChunks; chunk++) {
-        chunks.push(
-            input.substring((chunk - 1) * input.length / numChunks, (chunk) * input.length / numChunks)
-        )
+	for (let chunk = 1; chunk <= numChunks; chunk++) {
+		chunks.push(
+			input.substring(
+				((chunk - 1) * input.length) / numChunks,
+				(chunk * input.length) / numChunks
+			)
+		);
+	}
 
-    }
-
-    return chunks;
+	return chunks;
 }

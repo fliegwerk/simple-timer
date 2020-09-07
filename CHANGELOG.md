@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- code styling via [prettier](https://prettier.io/)
+- new commands in package.json
 ### Changed
+- intended all with tabs for better accessibility
+- moved from yarn to npm
 - project icon
 - Favicons
 - PWA Favicon names

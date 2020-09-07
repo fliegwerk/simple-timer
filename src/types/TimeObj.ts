@@ -1,6 +1,6 @@
 export default interface TimeObj {
-    seconds: number;
-    minutes: number;
-    hours: number;
-    days: number;
+	seconds: number;
+	minutes: number;
+	hours: number;
+	days: number;
 }

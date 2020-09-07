@@ -1,12 +1,12 @@
 .infotext {
-    width: 100%;
-    display: block;
-    color: var(--fg);
-    text-align: center;
-    margin: 0.5rem 0;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 1rem;
-    overflow-x: auto;
+	width: 100%;
+	display: block;
+	color: var(--fg);
+	text-align: center;
+	margin: 0.5rem 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-size: 1rem;
+	overflow-x: auto;
 }
