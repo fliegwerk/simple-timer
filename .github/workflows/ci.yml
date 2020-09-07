@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 13
-      - run: yarn install
-      - run: yarn run build --if-present
-      - run: yarn test
+      - run: npm ci
+      - run: npm run prettier:ci
+      - run: npm run ts
+      - run: npm run test
+      - run: npm run build
