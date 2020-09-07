@@ -23,14 +23,16 @@ export default function DarkModeToggle(props: Props) {
 
 	useEffect(() => {
 		autoSetTheme();
-		window
-			.matchMedia('(prefers-color-scheme: dark)')
-			.addEventListener('change', autoSetTheme);
-
-		return () => {
+		window.matchMedia &&
 			window
 				.matchMedia('(prefers-color-scheme: dark)')
-				.removeEventListener('change', autoSetTheme);
+				.addEventListener('change', autoSetTheme);
+
+		return () => {
+			window.matchMedia &&
+				window
+					.matchMedia('(prefers-color-scheme: dark)')
+					.removeEventListener('change', autoSetTheme);
 		};
 	}, [autoSetTheme]);
 
