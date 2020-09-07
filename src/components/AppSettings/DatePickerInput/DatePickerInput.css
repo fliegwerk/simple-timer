@@ -1,21 +1,21 @@
 .input {
-    width: 100%;
-    background: var(--gray);
-    color: var(--fg);
-    border-radius: 0;
-    border: none;
-    padding: 0.25rem 0.5rem;
-    margin-left: 0;
-    text-transform: unset;
-    font-size: 1rem;
-    text-align: left;
+	width: 100%;
+	background: var(--gray);
+	color: var(--fg);
+	border-radius: 0;
+	border: none;
+	padding: 0.25rem 0.5rem;
+	margin-left: 0;
+	text-transform: unset;
+	font-size: 1rem;
+	text-align: left;
 }
 
 .input:hover {
-    font-weight: initial;
+	font-weight: initial;
 }
 
 .input::-webkit-outer-spin-button,
 .input::-webkit-inner-spin-button {
-    border-radius: 0;
+	border-radius: 0;
 }

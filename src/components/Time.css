@@ -1,41 +1,41 @@
 .clock {
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
+	display: flex;
+	justify-content: center;
+	margin: 2rem;
 }
 
 .time-container {
-    position: relative;
-    margin: 0 0.25rem;
-    height: 7rem;
-    background: var(--gray);
+	position: relative;
+	margin: 0 0.25rem;
+	height: 7rem;
+	background: var(--gray);
 }
 
 .time-value,
 .time-label {
-    width: 6rem;
-    height: 5rem;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    z-index: 10;
+	width: 6rem;
+	height: 5rem;
+	font-weight: 300;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	z-index: 10;
 }
 
 .time-label {
-    position: absolute;
-    bottom: 0;
-    height: 2rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.2rem;
-    font-weight: 500;
-    z-index: 9;
-    box-shadow: none;
-    text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.25);
+	position: absolute;
+	bottom: 0;
+	height: 2rem;
+	font-size: 0.75rem;
+	letter-spacing: 0.2rem;
+	font-weight: 500;
+	z-index: 9;
+	box-shadow: none;
+	text-transform: uppercase;
+	background: rgba(0, 0, 0, 0.25);
 }
 
 .time-seconds {
-    background: var(--accent);
+	background: var(--accent);
 }

@@ -17,8 +17,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10
-      - run: yarn install
-      - run: yarn build
+      - run: npm ci
+      - run: npm run build
       - run: zip -r build.zip build
       - name: Create Release
         id: create_release

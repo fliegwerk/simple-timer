@@ -1,46 +1,46 @@
 .container {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .container > div {
-    width: 100%;
-    margin: 0.5rem 0;
+	width: 100%;
+	margin: 0.5rem 0;
 }
 
 .container > div > div {
-    width: 100%;
+	width: 100%;
 }
 
 .container div h2 {
-    text-align: left;
-    margin: 0.5rem 0;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    font-size: 1rem;
+	text-align: left;
+	margin: 0.5rem 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	font-size: 1rem;
 }
 
 .container div button {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .datepicker > div {
-    width: 100%;
+	width: 100%;
 }
 
 .datepicker div div button {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .textarea {
-    display: block;
-    width: 100%;
-    text-align: left;
-    margin-top: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    background: var(--gray);
-    color: var(--fg);
-    border-radius: 0;
-    border: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin-top: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	background: var(--gray);
+	color: var(--fg);
+	border-radius: 0;
+	border: none;
 }
