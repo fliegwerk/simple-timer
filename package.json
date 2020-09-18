@@ -27,7 +27,7 @@
 		"@types/react-dom": "^16.9.0",
 		"chalk": "^4.1.0",
 		"electron": "^10.1.2",
-		"electron-builder": "^22.8.0",
+		"electron-builder": "^22.8.1",
 		"prettier": "^2.1.2",
 		"react-scripts": "3.4.3",
 		"shelljs": "^0.8.4",
