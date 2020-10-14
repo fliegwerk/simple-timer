@@ -17,6 +17,7 @@
 		"react-dom": "^16.13.1"
 	},
 	"devDependencies": {
+		"@fortawesome/fontawesome-common-types": "^0.2.32",
 		"@testing-library/jest-dom": "^5.11.4",
 		"@testing-library/react": "^11.0.4",
 		"@testing-library/user-event": "^12.1.7",
