@@ -27,7 +27,7 @@
 		"@types/react-datepicker": "^3.1.1",
 		"@types/react-dom": "^16.9.9",
 		"chalk": "^4.1.0",
-		"electron": "^11.0.0",
+		"electron": "^11.0.1",
 		"electron-builder": "^22.9.1",
 		"prettier": "^2.1.2",
 		"react-scripts": "4.0.0",
