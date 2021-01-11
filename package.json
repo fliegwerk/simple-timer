@@ -13,7 +13,7 @@
 		"is-electron": "^2.2.0",
 		"react": "^16.14.0",
 		"react-contenteditable": "^3.3.5",
-		"react-datepicker": "^3.3.0",
+		"react-datepicker": "^3.4.0",
 		"react-dom": "^16.14.0"
 	},
 	"devDependencies": {
